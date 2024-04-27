@@ -1,0 +1,21 @@
+file /home/imissoldgaren/tsunami_lab/SConstruct,line 110:
+	Configure(confdir = .sconf_temp)
+scons: Configure: Checking for C++ library netcdf... 
+scons: Configure: ".sconf_temp/conftest_1ddd6b9627e69bc88093239e56660785_0.cpp" is up to date.
+scons: Configure: The original builder output was:
+  |.sconf_temp/conftest_1ddd6b9627e69bc88093239e56660785_0.cpp <-
+  |  |
+  |  |
+  |  |#include "netcdf.h"
+  |  |
+  |  |int main(void) {
+  |  |  
+  |  |return 0;
+  |  |}
+  |  |
+  |
+g++ -o .sconf_temp/conftest_1ddd6b9627e69bc88093239e56660785_0.o -c -std=c++17 -Wall -Wextra -Wpedantic -Werror -fopenmp -O3 .sconf_temp/conftest_1ddd6b9627e69bc88093239e56660785_0.cpp
+cc1plus: fatal error: .sconf_temp/conftest_1ddd6b9627e69bc88093239e56660785_0.cpp: No such file or directory
+compilation terminated.
+scons: Configure: no
+

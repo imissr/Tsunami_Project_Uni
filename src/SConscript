@@ -1,0 +1,59 @@
+##
+# @author Alexander Breuer (alex.breuer AT uni-jena.de)
+#
+# @section DESCRIPTION
+# Collects sources for a build.
+##
+Import('env')
+
+# gather sources
+l_sources = [ 'solvers/Roe.cpp',
+              'patches/wavepropagation1d/WavePropagation1d.cpp',
+              'patches/wavepropagation2d/WavePropagation2d.cpp',
+              'setups/dambreak/DamBreak1d.cpp',
+              'setups/dambreak2d/DamBreak2d.cpp',
+              'io/Csv/Csv.cpp',
+              'io/Stations/Station.cpp',
+              'solvers/fwave.cpp',
+              'setups/shockshock/ShockShock.cpp',
+              'setups/rarerare/RareRare.cpp',
+              'setups/subcriticalflow/SubcriticalFlow.cpp',
+              'setups/supercriticalflow/SupercriticalFlow.cpp',
+              'setups/tsunamievent1d/TsunamiEvent1d.cpp',
+              'setups/tsunamievent2d/TsunamiEvent2d.cpp',
+              'io/JsReader/Configuration.cpp',
+              'io/NetCdf/NetCdf.cpp',
+              'setups/ArtificialTsunami2d/ArtificialTsunami2d.cpp']
+
+
+for l_so in l_sources:
+  env.sources.append( env.Object( l_so ) )
+
+env.standalone = env.Object( "main.cpp" )
+
+# gather unit tests
+l_tests = [ 'tests.cpp',
+            'solvers/Roe.test.cpp',
+            'patches/wavepropagation1d/WavePropagation1d.test.cpp',
+            'io/Csv/Csv.test.cpp',
+            'io/Stations/Station.test.cpp',
+            'setups/dambreak/DamBreak1d.test.cpp',
+            'setups/shockshock/ShockShock.test.cpp',
+            'setups/rarerare/RareRare.test.cpp',
+            'setups/subcriticalflow/SubcriticalFlow.test.cpp',
+            'setups/supercriticalflow/SupercriticalFlow.test.cpp',
+            'setups/dambreak2d/DamBreak2d.test.cpp',
+            'solvers/fwave.test.cpp',
+            'patches/wavepropagation2d/WavePropagation2d.test.cpp',
+            'setups/tsunamievent1d/TsunamiEvent1d.test.cpp',
+            'setups/tsunamievent2d/TsunamiEvent2d.test.cpp',
+            'io/NetCdf/NetCdf.test.cpp'
+            ]
+            
+            
+
+
+for l_te in l_tests:
+  env.tests.append( env.Object( l_te ) )
+
+Export('env')

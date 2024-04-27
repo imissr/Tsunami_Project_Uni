@@ -1,0 +1,25 @@
+{
+    "solver" : "fwave",
+    "dimension_x" : 3499750,
+    "dimension_y" : 2949750,
+    "setup" :  "tsunamievent2d",
+    "nx" : 3500,
+    "ny" : 2900,
+    "k"  : 1,
+    "hu" : 40,
+    "location" : 50,
+    "hv":0.0,
+    "hr": 5,
+    "hl": 15,
+    "domain_start_x" : -2999875,
+    "domain_start_y" : -1449875,
+    "wavepropagation" : "2d",
+    "endtime" : 7200,
+    "writer" : "netcdf",
+    "bathfile" : "data/output/chile_gebco20_usgs_250m_bath_fixed.nc",
+    "disfile" : "data/output/chile_gebco20_usgs_250m_displ_fixed.nc",
+    "outputfilename": "simulation.nc",
+    "usecheckpoint" : false,
+    "reflecting_boundary" : false
+    
+}
